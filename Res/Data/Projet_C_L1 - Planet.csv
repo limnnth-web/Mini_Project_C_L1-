@@ -1,5 +1,5 @@
 Id_planet,Name,Distance,Stellar_magnitude,Planet_type,Discovery_year,Mass_multiplier,Mass_wrt,Radius_multiplier,Radius_wrt,Orbital_radius,Orbital_period,Eccentricity,Detection_method,Status_Exploration,ID_Vessel
-1,11 Comae Berenices b,304.000000,472.307007,Gas Giant,2007,46.131001,Jupiter,1.080000,Jupiter,1.290000,8.925000,0.230000,Radial Velocity,0,0
+1,11 Comae Berenices b,204.000000,472.000000,Gas Giant,2007,46.000000,Jupiter,1.080000,Jupiter,1.290000,8.925000,0.230000,Radial Velocity,0,0
 2,11 Ursae Minoris b,409.000000,5.013000,Gas Giant,2009,14.740000,Jupiter,1.090000,Jupiter,1.530000,1.400000,0.080000,Radial Velocity,0,0
 3,14 Andromedae b,246.000000,523.132996,Gas Giant,2008,46.237999,Jupiter,1.150000,Jupiter,0.830000,5.086000,0.000000,Radial Velocity,1,LIL0003
 4,14 Herculis b,58.000000,661.934998,Gas Giant,2002,813.880981,Jupiter,1.120000,Jupiter,2.773000,4.800000,0.370000,Radial Velocity,0,0
@@ -13,7 +13,7 @@ Id_planet,Name,Distance,Stellar_magnitude,Planet_type,Discovery_year,Mass_multip
 12,2M0437 b,419.000000,16.186001,Gas Giant,2021,4.000000,Jupiter,1.160000,Jupiter,118.000000,3110.600098,0.000000,Direct Imaging,0,0
 13,2MASS J01033563-5515561 AB b,154.000000,15.788000,Gas Giant,2013,13.000000,Jupiter,1.100000,Jupiter,84.000000,1767.199951,0.000000,Direct Imaging,0,0
 14,2MASS J01225093-2439505 b,110.000000,14.244000,Gas Giant,2013,46.166000,Jupiter,1.000000,Jupiter,52.000000,593.200012,0.000000,Direct Imaging,0,0
-15,2MASS J02192210-3925225 b,131.000000,0.000000,Gas Giant,2015,46.278000,Jupiter,1.440000,Jupiter,156.000000,5878.100098,0.000000,Direct Imaging,0,0
+15,2MASS J02192210-3925225 b,131.000000,0.000000,Gas Giant,2015,46.278000,Jupiter,1.440000,Jupiter,156.000000,5878.100098,0.000000,Direct Imaging,1,RBX0005
 16,2MASS J04414489+2301513 b,393.000000,0.000000,Gas Giant,2010,46.148998,Jupiter,1.130000,Jupiter,15.000000,411.000000,0.000000,Direct Imaging,0,0
 17,2MASS J12073346-3932539 b,210.000000,20.150000,Gas Giant,2004,5.000000,Jupiter,1.150000,Jupiter,55.000000,2885.899902,0.000000,Direct Imaging,0,0
 18,2MASS J19383260+4603591 b,1293.000000,12.651000,Gas Giant,2015,46.265999,Jupiter,1.200000,Jupiter,0.920000,11.115000,0.330000,Eclipse Timing Variations,0,0

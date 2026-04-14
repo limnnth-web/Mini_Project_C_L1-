@@ -178,6 +178,8 @@ void editPlanet(Planet *catalog, int nbPlanet, int targetPlanet)
 {
     Planet *idPTarget = NULL;
     int wrt = 0;
+    int maxToken = 50;
+    char token [maxToken];
 
     //Chercher la planete
     idPTarget = searchP(catalog, nbPlanet, targetPlanet);
@@ -264,7 +266,19 @@ void editPlanet(Planet *catalog, int nbPlanet, int targetPlanet)
     readFloat(&idPTarget->eccentricity);
 
  //LƯU Ý!!!       //detectionMethod
+    do
+    {
+        printf("Entrez le nom de la nouvelle methode de détection (OBLIGATOIRE): \n");
+        fgets(token, maxToken, stdin); //stdin: standard input, apporter les donnees de la clavier
+        cleanStr(token);
 
+        if (strlen(token) == 0)
+        {
+            printf("Le nom pour la nouvelle methode de détection est obligatoire.\n");
+        }
+        
+    } while (strlen(token) == 0);
+    strcpy(idPTarget->detectionMethod, token);
     
 
     //statusExploration !!!!
@@ -415,7 +429,19 @@ int addPlanet(Planet *catalog, int nbPlanet, int targetPlanet)
     readFloat(&newP.eccentricity);
 
     //detectionMethod
+    do
+    {
+        printf("Entrez le nom de la nouvelle methode de détection (OBLIGATOIRE): \n");
+        fgets(token, maxToken, stdin); //stdin: standard input, apporter les donnees de la clavier
+        cleanStr(token);
 
+        if (strlen(token) == 0)
+        {
+            printf("Le nom pour la nouvelle methode de détection est obligatoire.\n");
+        }
+        
+    } while (strlen(token) == 0);
+    strcpy(newP.detectionMethod, token);
 
 
     //statusExploration

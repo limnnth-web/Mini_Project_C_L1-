@@ -162,7 +162,7 @@ int main()
                                 {
                                     if(strcmp(v->status, "AVAILABLE") == 0 ) //lancer
                                     {   
-                                        printf("\nPreparer lancer la sonde %s", v->idVessel);
+                                        printf("\nPreparer lancer la sonde %s\n", v->idVessel);
                                         printf("Entrez l'ID planete: ");
                                         readInt(&targetPlanet);
                                         launchVessel(catalog, nbPlanet, targetPlanet, fleet, nbVessel, targetVessel);
