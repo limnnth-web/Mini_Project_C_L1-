@@ -26,7 +26,7 @@ int loadPlanet(const char *planetcsv, Planet *catalog)
     char *token = NULL;
 
     //passer la premier ligne (header)
-    fgets(perLine, maxPerLine, f); //aller a fichier f, commencer a &surLigne, max des donnees est maxSurLigne
+    fgets(perLine, maxPerLine, f); //aller a fichier f, commencer a &perLine, max des donnees est maxPerLine
 
     //Charger planete
     while (fgets(perLine, maxPerLine, f) && (nbPlanet < maxPlanet))
@@ -268,7 +268,7 @@ void editPlanet(Planet *catalog, int nbPlanet, int targetPlanet)
  //LƯU Ý!!!       //detectionMethod
     do
     {
-        printf("Entrez le nom de la nouvelle methode de détection (OBLIGATOIRE): \n");
+        printf("Entrez le nom de la nouvelle methode de detection (OBLIGATOIRE) (methode de detection actuelle: %s): \n", idPTarget->detectionMethod);
         fgets(token, maxToken, stdin); //stdin: standard input, apporter les donnees de la clavier
         cleanStr(token);
 
@@ -302,7 +302,7 @@ void editPlanet(Planet *catalog, int nbPlanet, int targetPlanet)
     }
 
 
-    printf("Succes mise à jour de la planète %s!\n", idPTarget->namePlanet);
+    printf("Succes mise a jour de la planète %s!\n", idPTarget->namePlanet);
     printP(idPTarget);
 
 }

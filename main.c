@@ -38,7 +38,7 @@ int main()
     int choixMenu = -1;
     printf("\nBIENVENUE!!!\n");
 
-    while (choixMenu != 0) 
+    do 
     {
         printf("\nMENU\n");
         printf("0: Sortie la programme\n");
@@ -56,8 +56,8 @@ int main()
                 {
                     printf("\nMENU PLANETE\n");
                     printf("0: Sauvegarder et Retour au Menu Principal\n");
-                    printf("1: Chercher/Action sur une planete (par ID)\n");
-                    printf("2: Chercher/Action sur une planete (par filtre)\n");
+                    printf("1: Chercher/Agir sur une planete (par ID)\n");
+                    printf("2: Chercher les planetes (par filtre)\n");
                     printf("3: Ajouter une nouvelle planete\n");
                     printf("4: Afficher tout le catalogue\n");
                     printf("Votre choix : ");
@@ -234,7 +234,7 @@ int main()
                 saveFile(catalog, nbPlanet, fleet, nbVessel);
                 break;
         }
-    }
+    } while (choixMenu != 0);
     
     return 0;
 }
