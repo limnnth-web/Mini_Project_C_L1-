@@ -1,7 +1,6 @@
 #ifndef PLANET_H
 #define PLANET_H
 
-
 #define maxPlanet 6000
 #define maxPerLine 1000 //pour lire les donnees sur une ligne csv
 

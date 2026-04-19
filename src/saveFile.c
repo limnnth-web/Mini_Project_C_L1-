@@ -2,15 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "planet.h"
-#include "vessel.h"
 #include "modify.h"
 
 //Sauvegarder Donnees
 void saveFile(const Planet *catalog, int nbPlanet, const Vessel *fleet, int nbVessel)
 {
-    
-
     //fichier planete
     FILE *fplanet = NULL;
     fplanet = fopen("Res/Data/Projet_C_L1 - Planet.csv","w");
@@ -37,7 +33,7 @@ void saveFile(const Planet *catalog, int nbPlanet, const Vessel *fleet, int nbVe
                     p -> statusExploration, p -> idVessel);
     }
     fclose(fplanet);
-    printf("Sauvegarde des planetes reussie!\n");
+    printf("\nSauvegarde des planetes reussie!\n");
 
     //fichier sonde
     FILE *fvessel = NULL;
@@ -64,7 +60,6 @@ void saveFile(const Planet *catalog, int nbPlanet, const Vessel *fleet, int nbVe
     printf("Sauvegarde des sondes reussie!\n");
 };
 
-
 void readFloat(float *token)
 {
     char temp [50];
@@ -82,7 +77,7 @@ void readFloat(float *token)
     }
 }
 
-void readInt(int *token) //!!!!CHECKKKK
+void readInt(int *token)
 {
     char temp [50];
 
@@ -90,20 +85,39 @@ void readInt(int *token) //!!!!CHECKKKK
     cleanStr(temp);
 
     if (strlen(temp) == 0)
-    {   
+    {
         *token = 0;
-        
     }
     else
     {
         *token = atoi(temp);
-        
     }
 }
 
 void readStr(char *token, int maxToken)
 {
-    fgets(token, maxToken, stdin); //fgets() collecte aussi \n 
-    cleanStr(token);
+    fgets(token, maxToken, stdin); //stdin: standard input, apporter les donnees de la clavier
+    cleanStr(token); //fgets() collecte aussi \n 
+
+    //si l'utilisateur ajouter ','
+    for (int i = 0; i < strlen(token); i++)
+    {
+        if (token[i] == ',')
+        {
+            token[i] = '_';
+        }
+    }
+}
+
+int yesOrNo()
+{
+    int choice;
+    printf("[0 ou entree] Non | [autre nombre]: Oui\n"); 
+    readInt(&choice);
+    if (choice != 0)
+    {
+        return 1;
+    }
+    return 0;
 }
 

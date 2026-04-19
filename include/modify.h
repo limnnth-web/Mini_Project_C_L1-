@@ -4,7 +4,6 @@
 #include "planet.h"
 #include "vessel.h"
 
-
 void cleanStr(char *str);
 
 void saveFile(const Planet *catalog, int nbPlanet, const Vessel *fleet, int nbVessel);
@@ -14,6 +13,8 @@ void readFloat(float *token);
 void readInt(int *token);
 
 void readStr(char *token, int maxToken);
+
+int yesOrNo();
 
 //Modifier planete
 void editPlanet(Planet *catalog, int nbPlanet, int targetPlanet);

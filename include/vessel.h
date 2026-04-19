@@ -4,8 +4,6 @@
 #define maxVessel 40
 #define maxPerLineV 50
 
-
-
 typedef struct {
     char idVessel[50];
     int idPlanet;

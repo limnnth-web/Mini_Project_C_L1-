@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
 #include "modify.h"
 
 void cleanStr(char *str)

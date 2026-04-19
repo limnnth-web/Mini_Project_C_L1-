@@ -1,11 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-#include <time.h>
 
 #include "modify.h"
-#include "planet.h"
-#include "vessel.h"
-
 
 //lancer sonde
 void launchVessel(Planet *catalog, int nbPlanet, int targetPlanet, Vessel *fleet, int nbVessel, char targetVessel[50])
@@ -52,7 +48,6 @@ void launchVessel(Planet *catalog, int nbPlanet, int targetPlanet, Vessel *fleet
         return;
     }
 };
-
 
 //retourner sonde
 void returnVessel(Planet *catalog, int nbPlanet, int targetPlanet, Vessel *fleet, int nbVessel, char targetVessel[50])
@@ -158,6 +153,4 @@ int addVessel(Vessel *fleet, int nbVessel, char targetVessel[50])
     printf("Ajout de la sonde reussie!\n");
     return nbVessel;
 }
-
-
 
