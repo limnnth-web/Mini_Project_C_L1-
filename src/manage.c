@@ -25,7 +25,7 @@ void launchVessel(Planet *catalog, int nbPlanet, int targetPlanet, Vessel *fleet
     //si ne trouve pas idVTarget
     if (idVTarget == NULL)
     {
-        printf("Ne trouve pas ce sonde\n");
+        printf("Ne trouve pas cette sonde\n");
         return;
     }
 
@@ -44,7 +44,7 @@ void launchVessel(Planet *catalog, int nbPlanet, int targetPlanet, Vessel *fleet
     }
     else
     {
-        printf("Le sonde %s n'est pas encore pret a etre lance ou la planete %s n'a pas statut non explorée\n", targetVessel, idPTarget -> namePlanet);
+        printf("La sonde %s n'est pas encore pret a etre lance ou la planete %s n'a pas statut non exploree\n", targetVessel, idPTarget -> namePlanet);
         return;
     }
 };
@@ -112,11 +112,11 @@ void maintainVessel(Vessel *fleet, int nbVessel, char targetVessel[50])
     if (strcmp(idVTarget -> status, "NOT AVAILABLE") == 0)
     {
         strcpy(idVTarget ->status, "AVAILABLE");
-        printf("La sonde %s a ete maintenu en état avec succès\n", targetVessel);
+        printf("La sonde %s a ete maintenu en etat avec succès\n", targetVessel);
     }
     else
     {
-        printf("Le sonde %s est en bon etat ou en mission\n", targetVessel);
+        printf("La sonde %s est en bon etat ou en mission\n", targetVessel);
         return;
     }
 }

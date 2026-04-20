@@ -13,8 +13,7 @@ int main()
     Vessel fleet[maxVessel];
     int nbVessel = 0;
     nbVessel = loadVessel("Res/Data/Projet_C_L1 - Vessel.csv", fleet);
-
-    
+ 
     int targetPlanet;
     char targetVessel[50];
     int statusFilterP;

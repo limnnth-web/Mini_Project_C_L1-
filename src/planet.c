@@ -211,7 +211,7 @@ void printCatalog(Planet *catalog, int nbPlanet)
     //Verifier le nombre des Planete
     if (nbPlanet == 0)
     {
-        printf("Le catalogue est vide.\n");
+        printf("Le catalogue est vide\n");
     }
     else
     {
@@ -238,7 +238,7 @@ void filterP(const Planet *catalog, int nbPlanet, int statusFilter)
         }
     }
 
-    printf("Il y a %d planete(s) dans cet etat.\n", count);
+    printf("Il y a %d planete(s) dans cet etat\n", count);
 }
 
 //Chercher idP
@@ -257,7 +257,7 @@ Planet* searchP(Planet *catalog, int nbPlanet, int targetPlanet)
     return idPTarget;
 }
 
-//Modifier planete [chưa xong]
+//Modifier planete 
 void editPlanet(Planet *catalog, int nbPlanet, int targetPlanet)
 {
     Planet *idPTarget = NULL;
@@ -399,7 +399,6 @@ void editPlanet(Planet *catalog, int nbPlanet, int targetPlanet)
         readFloat(&idPTarget->orbitalRadius);
     }
 
-
         //orbitalPeriod
     printf("Periode orbitale actuelle: %f \nVoulez-vous la modifier?: ",idPTarget->orbitalPeriod);
     if (yesOrNo() == 1)
@@ -415,7 +414,6 @@ void editPlanet(Planet *catalog, int nbPlanet, int targetPlanet)
     }
 
     //detectionMethod
-   
     printf("Methode de detection actuelle: %s \nVoulez-vous la modifier?: ", idPTarget->detectionMethod);
     if (yesOrNo() == 1)
     {
@@ -494,11 +492,11 @@ void editPlanet(Planet *catalog, int nbPlanet, int targetPlanet)
     
     printf("Succes mise a jour de la planete %s!\n", idPTarget->namePlanet);
     printP(idPTarget);
-
 }
 
-//Ajouter planete [chưa xong]
-int addPlanet(Planet *catalog, int nbPlanet, int targetPlanet){
+//Ajouter planete 
+int addPlanet(Planet *catalog, int nbPlanet, int targetPlanet)
+{
     //Verifier
     if (nbPlanet >= maxPlanet)
     {
@@ -704,7 +702,7 @@ int addPlanet(Planet *catalog, int nbPlanet, int targetPlanet){
     }
 
     //detectionMethod
-    printf("Entrez le nom de la nouvelle methode de détection (OBLIGATOIRE): \n");
+    printf("Entrez le nom de la nouvelle methode de detection (OBLIGATOIRE): \n");
     printf("Choisissez le nom de la methode de detection: \n");
         printf("[1] Eclipse Timing Variations | [2] Astrometry | [3] Transit  \n[4] Pulsation Timing Variations | [5] Pulsar Timing | [6] Direct Imaging \n[7] Transit Timing Variations | [8] Radial Velocity | [9] Gravitational Microlensing \n[10] Disk Kinematics | [11] Orbital Brightness Modulation | [autre nombre] Other \n");
         readInt(&choice);
@@ -747,7 +745,7 @@ int addPlanet(Planet *catalog, int nbPlanet, int targetPlanet){
         default:
             do
             {
-                printf("Entrez le nom de la nouvelle methode de détection (OBLIGATOIRE): \n");
+                printf("Entrez le nom de la nouvelle methode de detection (OBLIGATOIRE): \n");
                 readStr(token, maxToken);
 
                 if (strlen(token) != 0)

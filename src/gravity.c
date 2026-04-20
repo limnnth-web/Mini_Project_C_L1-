@@ -12,7 +12,7 @@ float calculGravity (const Planet *p)
     mass = p -> massMultiplier;
     rad = p -> radiusMultiplier;
 
-    //Le rayon et la masse doivent être positifs
+    //Le rayon et la masse doivent etre positifs
     if ((rad > 0) && (mass > 0))
     {
         //massJupiter -> massEarth
@@ -30,7 +30,6 @@ float calculGravity (const Planet *p)
         //Calculer la gravite
         g = mass/(rad * rad);
         return g;
-        
     }
 
     printf("Aucune donnee disponible pour le calcul\n");

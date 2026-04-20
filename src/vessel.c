@@ -82,7 +82,7 @@ void printFleet(Vessel *fleet, int nbVessel)
     //Verifier le nombre des sondes
     if (nbVessel == 0)
     {
-        printf("La flotte est vide.\n");
+        printf("La flotte est vide\n");
     }
     else
     {
